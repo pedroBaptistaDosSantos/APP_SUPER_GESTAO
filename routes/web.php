@@ -21,7 +21,7 @@ Route::get('sobre-nos', function(){
     return view('site.sobre-nos');
 })->name('site.sobrenos');
 Route::get('contato',[ContatoController::class, 'contato'])->name('site.contato');
-Route::post('contato',[ContatoController::class, 'contato'])->name('site.contato');
+Route::post('contato',[ContatoController::class, 'salvar'])->name('site.contato');
 Route::prefix('app')->group(function() {
     Route::get('/fornecedores', [FornecedorController::class, 'index']);
 });
